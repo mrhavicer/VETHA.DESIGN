@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Order Successful | VETHA DESIGN</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: #050b10;
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 520px;
+    padding: 18px;
+}
+
+.card {
+    padding: 28px 18px;
+
+    background: #0b1820;
+
+    border: 1px solid rgba(0,212,255,0.2);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,0.4);
+}
+
+
+/* SUCCESS ICON */
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 2px solid #00d4ff;
+
+    color: #00d4ff;
+
+    font-size: 35px;
+}
+
+
+/* HEADER */
+
+.brand {
+    text-align: center;
+
+    color: #00d4ff;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+h1 {
+    margin: 8px 0 6px;
+
+    text-align: center;
+
+    font-size: 26px;
+}
+
+.subtitle {
+    margin: 0 0 22px;
+
+    text-align: center;
+
+    color: #81939d;
+
+    font-size: 10px;
+}
+
+
+/* ORDER NUMBER */
+
+.order-number {
+    padding: 16px;
+
+    margin-bottom: 16px;
+
+    text-align: center;
+
+    background: #07131b;
+
+    border-radius: 10px;
+
+    border: 1px solid
+        rgba(0,212,255,0.18);
+}
+
+.order-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #718592;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+#orderNumber {
+    color: #00d4ff;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* DETAILS */
+
+.details {
+    padding: 14px;
+
+    margin-bottom: 18px;
+
+    background: #07131b;
+
+    border-radius: 10px;
+}
+
+.detail {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid
+        rgba(255,255,255,0.06);
+
+    font-size: 10px;
+}
+
+.detail:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    color: #718592;
+}
+
+.detail-value {
+    max-width: 65%;
+
+    color: white;
+
+    font-weight: bold;
+
+    text-align: right;
+
+    word-break: break-word;
+}
+
+
+/* CUSTOMER */
+
+.customer-title {
+    margin-bottom: 10px;
+
+    color: #00d4ff;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.address {
+    margin-top: 10px;
+
+    padding: 12px;
+
+    background: #07131b;
+
+    border-radius: 9px;
+
+    color: #d7e0e4;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* WHATSAPP BUTTON */
+
+.whatsapp {
+    width: 100%;
+
+    min-height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 18px;
+
+    border-radius: 10px;
+
+    background: #25D366;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.2s;
+}
+
+.whatsapp:active {
+    transform: scale(0.97);
+}
+
+
+/* CONTACT BUTTON */
+
+.contact-button {
+    width: 100%;
+
+    min-height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 10px;
+
+    border-radius: 10px;
+
+    background: #0d1d27;
+
+    border: 1px solid
+        rgba(0,212,255,0.25);
+
+    color: #00d4ff;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transition: 0.2s;
+}
+
+.contact-button:active {
+    transform: scale(0.97);
+}
+
+
+/* HOME BUTTON */
+
+.home {
+    width: 100%;
+
+    min-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 10px;
+
+    border-radius: 10px;
+
+    background: #0d1d27;
+
+    border: 1px solid
+        rgba(0,212,255,0.2);
+
+    color: #00d4ff;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.2s;
+}
+
+.home:active {
+    transform: scale(0.97);
+}
+
+
+/* FOOTER */
+
+.footer {
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #607783;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+<div class="card">
+
+
+    <!-- SUCCESS -->
+
+    <div class="success-icon">
+        ✓
+    </div>
+
+
+    <div class="brand">
+        VETHA DESIGN
+    </div>
+
+
+    <h1>
+        Order Successful!
+    </h1>
+
+
+    <p class="subtitle">
+        Thank you for choosing VETHA DESIGN.
+    </p>
+
+
+    <!-- ORDER NUMBER -->
+
+    <div class="order-number">
+
+        <span class="order-label">
+            ORDER NUMBER
+        </span>
+
+        <span id="orderNumber">
+            —
+        </span>
+
+    </div>
+
+
+    <!-- ORDER DETAILS -->
+
+    <div class="details">
+
+
+        <div class="detail">
+
+            <span class="detail-label">
+                Product
+            </span>
+
+            <span
+                class="detail-value"
+                id="product">
+                —
+            </span>
+
+        </div>
+
+
+        <div class="detail">
+
+            <span class="detail-label">
+                Size
+            </span>
+
+            <span
+                class="detail-value"
+                id="size">
+                —
+            </span>
+
+        </div>
+
+
+        <div class="detail">
+
+            <span class="detail-label">
+                Thickness
+            </span>
+
+            <span
+                class="detail-value"
+                id="thickness">
+                —
+            </span>
+
+        </div>
+
+
+        <div class="detail">
+
+            <span class="detail-label">
+                Quantity
+            </span>
+
+            <span
+                class="detail-value"
+                id="quantity">
+                —
+            </span>
+
+        </div>
+
+
+        <div class="detail">
+
+            <span class="detail-label">
+                Total Price
+            </span>
+
+            <span
+                class="detail-value"
+                id="price">
+                —
+            </span>
+
+        </div>
+
+
+        <div class="detail">
+
+            <span class="detail-label">
+                Payment
+            </span>
+
+            <span
+                class="detail-value"
+                id="payment">
+                —
+            </span>
+
+        </div>
+
+
+        <div class="detail">
+
+            <span class="detail-label">
+                UTR / Transaction ID
+            </span>
+
+            <span
+                class="detail-value"
+                id="utr">
+                —
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- CUSTOMER DETAILS -->
+
+    <div class="customer-title">
+        CUSTOMER DETAILS
+    </div>
+
+
+    <div class="details">
+
+
+        <div class="detail">
+
+            <span class="detail-label">
+                Name
+            </span>
+
+            <span
+                class="detail-value"
+                id="customerName">
+                —
+            </span>
+
+        </div>
+
+
+        <div class="detail">
+
+            <span class="detail-label">
+                Phone
+            </span>
+
+            <span
+                class="detail-value"
+                id="phone">
+                —
+            </span>
+
+        </div>
+
+
+        <div class="address">
+
+            <strong>
+                Delivery Address
+            </strong>
+
+            <br><br>
+
+            <span id="address">
+                —
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- WHATSAPP -->
+
+    <a
+        id="whatsappButton"
+        href="#"
+        target="_blank"
+        class="whatsapp">
+
+        SEND ORDER DETAILS ON WHATSAPP →
+
+    </a>
+
+
+    <!-- CONTACT US -->
+
+    <a
+        href="tel:+918667887579"
+        class="contact-button">
+
+        📞 CONTACT US
+
+    </a>
+
+
+    <!-- HOME -->
+
+    <a
+        href="../index.html"
+        class="home">
+
+        BACK TO HOME
+
+    </a>
+
+
+    <div class="footer">
+
+        VETHA DESIGN · FLEX & FRAME
+
+    </div>
+
+
+</div>
+
+</div>
+
+
+<script>
+
+
+/* =========================
+   GET ORDER DATA
+========================= */
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+/* =========================
+   ORDER NUMBER
+========================= */
+
+let orderNumber =
+    params.get("order");
+
+
+if (!orderNumber) {
+
+    orderNumber =
+        "VD-" +
+        Math.floor(
+            100000 +
+            Math.random() * 900000
+        );
+
+}
+
+
+document.getElementById(
+    "orderNumber"
+).textContent =
+    orderNumber;
+
+
+/* =========================
+   PRODUCT DETAILS
+========================= */
+
+document.getElementById(
+    "product"
+).textContent =
+    params.get("product") || "—";
+
+
+document.getElementById(
+    "size"
+).textContent =
+    params.get("size") || "—";
+
+
+document.getElementById(
+    "thickness"
+).textContent =
+    params.get("thickness") || "—";
+
+
+document.getElementById(
+    "quantity"
+).textContent =
+    params.get("quantity") || "—";
+
+
+const price =
+    params.get("price");
+
+
+document.getElementById(
+    "price"
+).textContent =
+    price
+    ? "₹" +
+      Number(price)
+        .toLocaleString("en-IN")
+    : "—";
+
+
+document.getElementById(
+    "payment"
+).textContent =
+    params.get("payment") || "—";
+
+
+document.getElementById(
+    "utr"
+).textContent =
+    params.get("utr") || "—";
+
+
+/* =========================
+   CUSTOMER DETAILS
+========================= */
+
+document.getElementById(
+    "customerName"
+).textContent =
+    params.get("name") || "—";
+
+
+document.getElementById(
+    "phone"
+).textContent =
+    params.get("phone") || "—";
+
+
+document.getElementById(
+    "address"
+).textContent =
+    params.get("address") || "—";
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+/*
+   CHANGE THIS NUMBER
+   Example:
+   919876543210
+
+   No + symbol
+   No spaces
+*/
+
+const whatsappNumber =
+    "918667887579";
+
+
+const whatsappMessage =
+
+`Hello VETHA DESIGN 👋
+
+I have placed an order.
+
+ORDER DETAILS
+
+Order No: ${orderNumber}
+
+Product: ${params.get("product") || "—"}
+Size: ${params.get("size") || "—"}
+Thickness: ${params.get("thickness") || "—"}
+Quantity: ${params.get("quantity") || "—"}
+Total Price: ₹${price || "—"}
+
+Payment: ${params.get("payment") || "—"}
+UTR / Transaction ID: ${params.get("utr") || "—"}
+
+CUSTOMER DETAILS
+
+Name: ${params.get("name") || "—"}
+Phone: ${params.get("phone") || "—"}
+
+Address:
+${params.get("address") || "—"}
+
+Please confirm my order.
+
+Thank you.
+VETHA DESIGN`;
+
+
+document.getElementById(
+    "whatsappButton"
+).href =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(
+        whatsappMessage
+    );
+
+
+</script>
+
+
+</body>
+
+</html>

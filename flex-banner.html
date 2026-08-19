@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Flex & Banner | VETHA DESIGN</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    background: #050b10;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden;
+}
+
+.page {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 18px 14px 40px;
+}
+
+
+/* HEADER */
+
+.header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.back {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #0d1d27;
+
+    color: #00d4ff;
+
+    text-decoration: none;
+
+    font-size: 20px;
+}
+
+.brand {
+    color: #00d4ff;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.header h1 {
+    margin: 3px 0 0;
+
+    font-size: 23px;
+}
+
+
+/* INTRO */
+
+.intro {
+    margin-bottom: 25px;
+}
+
+.intro-label {
+    color: #00d4ff;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.intro h2 {
+    margin: 8px 0;
+
+    font-size: 27px;
+
+    line-height: 1.1;
+}
+
+.intro h2 span {
+    color: #00d4ff;
+}
+
+.intro p {
+    margin: 0;
+
+    color: #7d929e;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* FITTING NOTICE */
+
+.notice {
+    margin-bottom: 25px;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,180,0,0.07);
+
+    border: 1px solid
+        rgba(255,180,0,0.25);
+
+    color: #d6c48b;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+.notice strong {
+    color: #ffd45c;
+}
+
+
+/* SECTION TITLE */
+
+.section-title {
+    margin: 0 0 12px;
+
+    color: #00d4ff;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+/* MODELS */
+
+.models {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin-bottom: 30px;
+}
+
+.model {
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #0b1820;
+
+    border: 1px solid
+        rgba(255,255,255,0.08);
+}
+
+.model-image {
+    width: 100%;
+
+    height: 125px;
+
+    background: #071017;
+}
+
+.model-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+.model-name {
+    padding: 10px;
+
+    text-align: center;
+
+    color: #00d4ff;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* SIZES */
+
+.size-card {
+    width: 100%;
+
+    margin-bottom: 9px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: #0b1820;
+
+    border: 1px solid
+        rgba(255,255,255,0.08);
+}
+
+.size {
+    margin-bottom: 9px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.size span {
+    color: #718592;
+
+    font-size: 7px;
+
+    font-weight: normal;
+}
+
+
+/* PRICE BUTTON */
+
+.price-button {
+    width: 100%;
+
+    min-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid
+        rgba(0,212,255,0.25);
+
+    background:
+        rgba(0,212,255,0.05);
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.price-button:hover {
+    background:
+        rgba(0,212,255,0.15);
+
+    border-color: #00d4ff;
+}
+
+.price-button:active {
+    transform: scale(0.97);
+}
+
+.price-label {
+    color: #718592;
+
+    font-size: 7px;
+}
+
+.price {
+    margin-top: 3px;
+
+    color: #00d4ff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.arrow {
+    color: #00d4ff;
+
+    font-size: 18px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #607783;
+
+    font-size: 7px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 380px) {
+
+    .page {
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+    .model-image {
+        height: 105px;
+    }
+
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 700px) {
+
+    .page {
+        padding: 30px 25px 50px;
+    }
+
+    .model-image {
+        height: 210px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <a
+        href="products.html"
+        class="back">
+
+        ←
+
+    </a>
+
+    <div>
+
+        <div class="brand">
+            VETHA DESIGN
+        </div>
+
+        <h1>
+            FLEX & BANNER
+        </h1>
+
+    </div>
+
+</header>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <div class="intro-label">
+        FLEX & BANNER COLLECTION
+    </div>
+
+    <h2>
+        CHOOSE YOUR
+        <span>SIZE</span>
+    </h2>
+
+    <p>
+        Select the required size and
+        continue to place your order.
+    </p>
+
+</section>
+
+
+<!-- NOTICE -->
+
+<div class="notice">
+
+    <strong>NOTE:</strong>
+
+    The prices mentioned below are
+    <strong>without fitting charges.</strong>
+
+</div>
+
+
+<!-- MODELS -->
+
+<section>
+
+    <h2 class="section-title">
+        OUR MODELS
+    </h2>
+
+
+    <div class="models">
+
+
+        <!-- FLEX 1 -->
+
+        <div class="model">
+
+            <div class="model-image">
+
+                <img
+                    src="../images/flex-1.jpg"
+                    alt="Flex 1">
+
+            </div>
+
+            <div class="model-name">
+                FLEX-1
+            </div>
+
+        </div>
+
+
+        <!-- FLEX 2 -->
+
+        <div class="model">
+
+            <div class="model-image">
+
+                <img
+                    src="../images/flex-2.jpg"
+                    alt="Flex 2">
+
+            </div>
+
+            <div class="model-name">
+                FLEX-2
+            </div>
+
+        </div>
+
+
+        <!-- FLEX 3 -->
+
+        <div class="model">
+
+            <div class="model-image">
+
+                <img
+                    src="../images/flex-3.jpg"
+                    alt="Flex 3">
+
+            </div>
+
+            <div class="model-name">
+                FLEX-3
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- SIZES -->
+
+<section>
+
+    <h2 class="section-title">
+        SELECT SIZE
+    </h2>
+
+
+    <!-- 10 X 8 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            10 × 8
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=10x8&price=800">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹800
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- 10 X 10 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            10 × 10
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=10x10&price=1000">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹1,000
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- 15 X 10 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            15 × 10
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=15x10&price=1500">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹1,500
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- 20 X 10 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            20 × 10
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=20x10&price=2000">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹2,000
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- 30 X 10 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            30 × 10
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=30x10&price=3000">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹3,000
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- 40 X 10 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            40 × 10
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=40x10&price=4000">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹4,000
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- 50 X 10 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            50 × 10
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=50x10&price=5000">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹5,000
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- 60 X 10 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            60 × 10
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=60x10&price=6000">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹6,000
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- 70 X 10 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            70 × 10
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=70x10&price=7000">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹7,000
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- 80 X 10 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            80 × 10
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=80x10&price=8000">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹8,000
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- 15 X 8 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            15 × 8
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=15x8&price=1200">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹1,200
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- 20 X 8 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            20 × 8
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=20x8&price=1600">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹1,600
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- 30 X 8 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            30 × 8
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=30x8&price=2400">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹2,400
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- 40 X 8 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            40 × 8
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=40x8&price=3200">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹3,200
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- 50 X 8 -->
+
+    <div class="size-card">
+
+        <div class="size">
+            50 × 8
+            <span>INCH</span>
+        </div>
+
+        <a
+            class="price-button"
+            href="order.html?product=Flex%20%26%20Banner&size=50x8&price=4000">
+
+            <div>
+
+                <div class="price-label">
+                    PRICE
+                </div>
+
+                <div class="price">
+                    ₹4,000
+                </div>
+
+            </div>
+
+            <span class="arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+</section>
+
+
+<footer class="footer">
+
+    VETHA DESIGN · FLEX & BANNER
+
+</footer>
+
+
+</div>
+
+</body>
+
+</html>

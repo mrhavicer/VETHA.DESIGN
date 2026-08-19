@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Order | VETHA DESIGN</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #050b10;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.page {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px 14px 40px;
+}
+
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.back {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #0d1d27;
+
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.brand {
+    color: #00d4ff;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.header h1 {
+    margin: 3px 0 0;
+    font-size: 22px;
+}
+
+
+/* SELECTION */
+
+.selection {
+    padding: 18px;
+    border-radius: 14px;
+    background: #0b1820;
+    border: 1px solid rgba(0,212,255,0.2);
+    margin-bottom: 20px;
+}
+
+.label {
+    color: #00d4ff;
+    font-size: 7px;
+    letter-spacing: 2px;
+}
+
+.selection h2 {
+    margin: 8px 0 18px;
+    font-size: 20px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.detail {
+    padding: 12px;
+    border-radius: 9px;
+    background: #07131b;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.detail span {
+    display: block;
+    color: #718592;
+    font-size: 7px;
+    letter-spacing: 1px;
+}
+
+.detail strong {
+    display: block;
+    margin-top: 5px;
+    color: #00d4ff;
+    font-size: 15px;
+}
+
+
+/* FORM */
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #8ca0ab;
+    font-size: 7px;
+    letter-spacing: 1.5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+
+    border-radius: 9px;
+    border: 1px solid rgba(255,255,255,0.1);
+
+    outline: none;
+
+    background: #0b1820;
+    color: white;
+
+    font-size: 12px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #00d4ff;
+}
+
+
+/* PAYMENT */
+
+.payment-method {
+    margin-top: 25px;
+    margin-bottom: 14px;
+}
+
+.payment-title {
+    margin-bottom: 10px;
+
+    color: #00d4ff;
+
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.payment-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.payment-option {
+    position: relative;
+}
+
+.payment-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.payment-option label {
+    min-height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    background: #0b1820;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    color: white;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.payment-option input:checked + label {
+    border-color: #00d4ff;
+
+    background: rgba(0,212,255,0.10);
+
+    color: #00d4ff;
+}
+
+
+/* UPI */
+
+.upi-box {
+    display: none;
+
+    margin-top: 10px;
+    padding: 14px;
+
+    border-radius: 10px;
+
+    background: #07131b;
+
+    border: 1px solid rgba(0,212,255,0.2);
+
+    text-align: center;
+}
+
+.upi-box.show {
+    display: block;
+}
+
+.upi-id {
+    margin-bottom: 10px;
+
+    color: #00d4ff;
+
+    font-size: 11px;
+
+    word-break: break-all;
+}
+
+.pay-button {
+    width: 100%;
+
+    min-height: 48px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #00d4ff;
+
+    color: #031018;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+}
+
+.payment-note {
+    margin-top: 8px;
+
+    color: #718592;
+
+    font-size: 7px;
+
+    line-height: 1.5;
+}
+
+
+/* UTR */
+
+.utr-box {
+    display: none;
+    margin-top: 10px;
+}
+
+.utr-box.show {
+    display: block;
+}
+
+
+/* SUBMIT */
+
+.order-button {
+    width: 100%;
+
+    min-height: 54px;
+
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #00d4ff;
+
+    color: #031018;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+.order-button:active,
+.pay-button:active {
+    transform: scale(0.97);
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <a href="photo-frame.html"
+       class="back">
+
+        ←
+
+    </a>
+
+    <div>
+
+        <div class="brand">
+            VETHA DESIGN
+        </div>
+
+        <h1>
+            Place Order
+        </h1>
+
+    </div>
+
+</header>
+
+
+<!-- SELECTED FRAME -->
+
+<section class="selection">
+
+    <div class="label">
+        YOUR SELECTION
+    </div>
+
+    <h2>
+        PHOTO FRAME
+    </h2>
+
+
+    <div class="details">
+
+
+        <div class="detail">
+
+            <span>
+                SIZE
+            </span>
+
+            <strong id="size">
+                Loading...
+            </strong>
+
+        </div>
+
+
+        <div class="detail">
+
+            <span>
+                THICKNESS
+            </span>
+
+            <strong id="thickness">
+                Loading...
+            </strong>
+
+        </div>
+
+
+        <div class="detail">
+
+            <span>
+                PRICE
+            </span>
+
+            <strong id="price">
+                Loading...
+            </strong>
+
+        </div>
+
+
+        <div class="detail">
+
+            <span>
+                QUANTITY
+            </span>
+
+            <strong id="quantityDisplay">
+                1
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CUSTOMER DETAILS -->
+
+<form id="orderForm">
+
+
+    <div class="form-group">
+
+        <label>
+            NAME
+        </label>
+
+        <input
+            id="customerName"
+            type="text"
+            placeholder="Enter your name"
+            required>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>
+            PHONE NUMBER
+        </label>
+
+        <input
+            id="phone"
+            type="tel"
+            placeholder="Enter phone number"
+            required>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>
+            QUANTITY
+        </label>
+
+        <input
+            id="quantity"
+            type="number"
+            value="1"
+            min="1"
+            required>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>
+            UPLOAD PHOTO
+        </label>
+
+        <input
+            id="photo"
+            type="file"
+            accept="image/*"
+            required>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>
+            DELIVERY ADDRESS
+        </label>
+
+        <textarea
+            id="address"
+            rows="4"
+            placeholder="Enter your complete address"
+            required></textarea>
+
+    </div>
+
+
+    <!-- PAYMENT -->
+
+    <div class="payment-method">
+
+        <div class="payment-title">
+            PAYMENT METHOD
+        </div>
+
+
+        <div class="payment-options">
+
+
+            <div class="payment-option">
+
+                <input
+                    type="radio"
+                    id="upi"
+                    name="payment"
+                    value="UPI">
+
+                <label for="upi">
+                    UPI
+                </label>
+
+            </div>
+
+
+            <div class="payment-option">
+
+                <input
+                    type="radio"
+                    id="cod"
+                    name="payment"
+                    value="Cash on Delivery">
+
+                <label for="cod">
+                    CASH ON DELIVERY
+                </label>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- UPI BOX -->
+
+        <div
+            id="upiBox"
+            class="upi-box">
+
+
+            <div class="upi-id">
+
+                UPI ID:
+                <strong>
+                    kkrtsv12-1@oksbi
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="payButton"
+                class="pay-button">
+
+                PAY WITH UPI →
+
+            </button>
+
+
+            <div class="payment-note">
+
+                Tap the button to open your
+                UPI app and complete payment.
+
+            </div>
+
+
+            <!-- UTR -->
+
+            <div
+                id="utrBox"
+                class="utr-box">
+
+                <div class="form-group">
+
+                    <label>
+                        UTR / TRANSACTION ID
+                    </label>
+
+                    <input
+                        id="utr"
+                        type="text"
+                        placeholder="Enter UTR after payment">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUBMIT -->
+
+    <button
+        type="submit"
+        class="order-button">
+
+        SUBMIT ORDER →
+
+    </button>
+
+
+</form>
+
+
+</div>
+
+
+<script>
+
+
+/* =========================
+   GET URL DATA
+========================= */
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+const size =
+    params.get("size");
+
+const thickness =
+    params.get("thickness");
+
+const price =
+    params.get("price");
+
+
+/* SIZE NAMES */
+
+const sizeNames = {
+
+    "6x4": "6 × 4 inch",
+
+    "6x8": "6 × 8 inch",
+
+    "12x8": "12 × 8 inch",
+
+    "10x15": "10 × 15 inch",
+
+    "12x15": "12 × 15 inch",
+
+    "12x18": "12 × 18 inch",
+
+    "16x20": "16 × 20 inch",
+
+    "18x24": "18 × 24 inch",
+
+    "20x30": "20 × 30 inch",
+
+    "24x34": "24 × 34 inch"
+
+};
+
+
+/* SHOW SIZE */
+
+if (size) {
+
+    document.getElementById("size")
+        .textContent =
+        sizeNames[size] || size;
+
+}
+
+
+/* SHOW THICKNESS */
+
+if (thickness) {
+
+    document.getElementById("thickness")
+        .textContent =
+        thickness.replace(
+            "inch",
+            " INCH"
+        );
+
+}
+
+
+/* PRICE */
+
+function getPrice() {
+
+    return Number(price || 0);
+
+}
+
+
+/* SHOW PRICE */
+
+if (price) {
+
+    document.getElementById("price")
+        .textContent =
+        "₹" +
+        getPrice().toLocaleString("en-IN");
+
+}
+
+
+/* =========================
+   QUANTITY
+========================= */
+
+const quantity =
+    document.getElementById(
+        "quantity"
+    );
+
+const quantityDisplay =
+    document.getElementById(
+        "quantityDisplay"
+    );
+
+
+quantity.addEventListener(
+    "input",
+    function () {
+
+        quantityDisplay.textContent =
+            quantity.value;
+
+    }
+);
+
+
+/* =========================
+   PAYMENT OPTIONS
+========================= */
+
+const upi =
+    document.getElementById("upi");
+
+const cod =
+    document.getElementById("cod");
+
+const upiBox =
+    document.getElementById("upiBox");
+
+const utrBox =
+    document.getElementById("utrBox");
+
+
+upi.addEventListener(
+    "change",
+    function () {
+
+        upiBox.classList.add("show");
+
+    }
+);
+
+
+cod.addEventListener(
+    "change",
+    function () {
+
+        upiBox.classList.remove("show");
+
+        utrBox.classList.remove("show");
+
+        document.getElementById(
+            "utr"
+        ).value = "";
+
+    }
+);
+
+
+/* =========================
+   UPI PAYMENT
+========================= */
+
+const payButton =
+    document.getElementById(
+        "payButton"
+    );
+
+
+payButton.addEventListener(
+    "click",
+    function () {
+
+        if (!price) {
+
+            alert(
+                "Price information is missing."
+            );
+
+            return;
+
+        }
+
+
+        const amount =
+            getPrice() *
+            Number(
+                quantity.value || 1
+            );
+
+
+        const upiURL =
+            "upi://pay" +
+
+            "?pa=" +
+            encodeURIComponent(
+                "kkrtsv12-1@oksbi"
+            ) +
+
+            "&pn=" +
+            encodeURIComponent(
+                "VETHA DESIGN"
+            ) +
+
+            "&am=" +
+            amount.toFixed(2) +
+
+            "&cu=INR" +
+
+            "&tn=" +
+            encodeURIComponent(
+                "VETHA DESIGN Photo Frame"
+            );
+
+
+        window.location.href =
+            upiURL;
+
+
+        setTimeout(
+            function () {
+
+                utrBox.classList.add(
+                    "show"
+                );
+
+            },
+            1000
+        );
+
+    }
+);
+
+
+/* =========================
+   SUBMIT ORDER
+========================= */
+
+document.getElementById(
+    "orderForm"
+).addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const payment =
+            document.querySelector(
+                'input[name="payment"]:checked'
+            );
+
+
+        if (!payment) {
+
+            alert(
+                "Please select a payment method."
+            );
+
+            return;
+
+        }
+
+
+        /* UPI VALIDATION */
+
+        let utr = "";
+
+        if (
+            payment.value === "UPI"
+        ) {
+
+            utr =
+                document.getElementById(
+                    "utr"
+                ).value.trim();
+
+
+            if (!utr) {
+
+                alert(
+                    "Please enter your UTR / Transaction ID after payment."
+                );
+
+                document.getElementById(
+                    "utrBox"
+                ).classList.add(
+                    "show"
+                );
+
+                return;
+
+            }
+
+        }
+
+
+        /* ORDER DETAILS */
+
+        const customerName =
+            document.getElementById(
+                "customerName"
+            ).value.trim();
+
+
+        const phone =
+            document.getElementById(
+                "phone"
+            ).value.trim();
+
+
+        const address =
+            document.getElementById(
+                "address"
+            ).value.trim();
+
+
+        const qty =
+            Number(
+                quantity.value || 1
+            );
+
+
+        const total =
+            getPrice() * qty;
+
+
+        /* GENERATE NEW ORDER NUMBER */
+
+        const orderNumber =
+            "VD-" +
+            Math.floor(
+                100000 +
+                Math.random() * 900000
+            );
+
+
+        /* SAVE ORDER NUMBER */
+
+        localStorage.setItem(
+            "vethaLastOrderNumber",
+            orderNumber
+        );
+
+
+        /* SUCCESS PAGE URL */
+
+        const successURL =
+            "order-success.html?" +
+
+            "order=" +
+            encodeURIComponent(
+                orderNumber
+            ) +
+
+            "&product=" +
+            encodeURIComponent(
+                "PHOTO FRAME"
+            ) +
+
+            "&size=" +
+            encodeURIComponent(
+                sizeNames[size] || size || "—"
+            ) +
+
+            "&thickness=" +
+            encodeURIComponent(
+                thickness || "—"
+            ) +
+
+            "&quantity=" +
+            encodeURIComponent(
+                qty
+            ) +
+
+            "&price=" +
+            encodeURIComponent(
+                total
+            ) +
+
+            "&payment=" +
+            encodeURIComponent(
+                payment.value
+            ) +
+
+            "&utr=" +
+            encodeURIComponent(
+                utr || "—"
+            ) +
+
+            "&name=" +
+            encodeURIComponent(
+                customerName
+            ) +
+
+            "&phone=" +
+            encodeURIComponent(
+                phone
+            ) +
+
+            "&address=" +
+            encodeURIComponent(
+                address
+            );
+
+
+        /* COD */
+
+        if (
+            payment.value ===
+            "Cash on Delivery"
+        ) {
+
+            alert(
+                "Order submitted with Cash on Delivery."
+            );
+
+            window.location.href =
+                successURL;
+
+            return;
+
+        }
+
+
+        /* UPI */
+
+        if (
+            payment.value === "UPI"
+        ) {
+
+            alert(
+                "Order submitted. Your UPI payment will be manually verified."
+            );
+
+            window.location.href =
+                successURL;
+
+            return;
+
+        }
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Photo Frame | VETHA DESIGN</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+
+    background: #050b10;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    width: 100%;
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 18px 14px 35px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.back {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #0d1d27;
+
+    color: #00d4ff;
+
+    text-decoration: none;
+
+    font-size: 20px;
+}
+
+.brand-small {
+    color: #00d4ff;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.header h1 {
+    margin: 3px 0 0;
+
+    font-size: 23px;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    margin-bottom: 28px;
+}
+
+.intro-label {
+    color: #00d4ff;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.intro h2 {
+    margin: 8px 0;
+
+    font-size: 27px;
+
+    line-height: 1.1;
+}
+
+.intro h2 span {
+    color: #00d4ff;
+}
+
+.intro p {
+    margin: 0;
+
+    color: #7d929e;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   MODELS
+========================= */
+
+.section-title {
+    margin: 0 0 12px;
+
+    color: #00d4ff;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.models {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin-bottom: 30px;
+}
+
+.model {
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #0b1820;
+
+    border: 1px solid
+        rgba(255,255,255,0.08);
+}
+
+.model-image {
+    width: 100%;
+    height: 125px;
+
+    background: #071017;
+}
+
+.model-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+.model-info {
+    padding: 8px;
+}
+
+.model-info h3 {
+    margin: 0;
+
+    font-size: 9px;
+}
+
+.model-info p {
+    margin: 4px 0 0;
+
+    color: #718592;
+
+    font-size: 7px;
+}
+
+
+/* =========================
+   SIZES
+========================= */
+
+.sizes {
+    width: 100%;
+}
+
+.size-card {
+    width: 100%;
+
+    margin-bottom: 9px;
+
+    padding: 11px;
+
+    border-radius: 10px;
+
+    background: #0b1820;
+
+    border: 1px solid
+        rgba(255,255,255,0.08);
+}
+
+.size {
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.size span {
+    color: #718592;
+
+    font-size: 7px;
+
+    font-weight: normal;
+}
+
+
+/* =========================
+   PRICE BUTTONS
+========================= */
+
+.prices {
+    display: flex;
+
+    gap: 7px;
+}
+
+.price {
+    flex: 1;
+
+    min-height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 8px 10px;
+
+    border-radius: 8px;
+
+    border: 1px solid
+        rgba(0,212,255,0.25);
+
+    background:
+        rgba(0,212,255,0.05);
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.price:hover {
+    background:
+        rgba(0,212,255,0.15);
+
+    border-color: #00d4ff;
+}
+
+.price:active {
+    transform: scale(0.96);
+}
+
+.price small {
+    display: block;
+
+    color: #8296a1;
+
+    font-size: 6px;
+
+    letter-spacing: 1px;
+}
+
+.price strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #00d4ff;
+
+    font-size: 13px;
+}
+
+.arrow {
+    color: #00d4ff;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #607783;
+
+    font-size: 7px;
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    .page {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .model-image {
+        height: 105px;
+    }
+
+    .model-info h3 {
+        font-size: 8px;
+    }
+
+    .model-info p {
+        font-size: 6px;
+    }
+
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 700px) {
+
+    .page {
+        padding: 30px 25px 50px;
+    }
+
+    .model-image {
+        height: 210px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <a
+            href="products.html"
+            class="back">
+
+            ←
+
+        </a>
+
+        <div>
+
+            <div class="brand-small">
+                VETHA DESIGN
+            </div>
+
+            <h1>
+                PHOTO FRAMES
+            </h1>
+
+        </div>
+
+    </header>
+
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+        <div class="intro-label">
+            PHOTO FRAME COLLECTION
+        </div>
+
+        <h2>
+            CHOOSE YOUR
+            <span>FRAME</span>
+        </h2>
+
+        <p>
+            Select a frame model, size
+            and thickness for your photo.
+        </p>
+
+    </section>
+
+
+    <!-- MODELS -->
+
+    <section>
+
+        <h2 class="section-title">
+            OUR MODELS
+        </h2>
+
+
+        <div class="models">
+
+
+            <!-- FRAME 1 -->
+
+            <div class="model">
+
+                <div class="model-image">
+
+                    <img
+                        src="../images/frame-1.jpg"
+                        alt="Frame 1">
+
+                </div>
+
+                <div class="model-info">
+
+                    <h3>
+                        Classic
+                    </h3>
+
+                    <p>
+                        Elegant design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FRAME 2 -->
+
+            <div class="model">
+
+                <div class="model-image">
+
+                    <img
+                        src="../images/frame-2.jpg"
+                        alt="Frame 2">
+
+                </div>
+
+                <div class="model-info">
+
+                    <h3>
+                        Premium
+                    </h3>
+
+                    <p>
+                        Premium design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FRAME 3 -->
+
+            <div class="model">
+
+                <div class="model-image">
+
+                    <img
+                        src="../images/frame-3.jpg"
+                        alt="Frame 3">
+
+                </div>
+
+                <div class="model-info">
+
+                    <h3>
+                        Gallery
+                    </h3>
+
+                    <p>
+                        Modern design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- SIZES -->
+
+    <section class="sizes">
+
+        <h2 class="section-title">
+            SELECT SIZE & THICKNESS
+        </h2>
+
+
+        <!-- 6 X 4 -->
+
+        <div class="size-card">
+
+            <div class="size">
+                6 × 4
+                <span>INCH</span>
+            </div>
+
+            <div class="prices">
+
+                <a
+                    class="price"
+                    href="order.html?size=6x4&thickness=1inch&price=150">
+
+                    <div>
+                        <small>1 INCH</small>
+                        <strong>₹150</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6 X 8 -->
+
+        <div class="size-card">
+
+            <div class="size">
+                6 × 8
+                <span>INCH</span>
+            </div>
+
+            <div class="prices">
+
+                <a
+                    class="price"
+                    href="order.html?size=6x8&thickness=1inch&price=250">
+
+                    <div>
+                        <small>1 INCH</small>
+                        <strong>₹250</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 12 X 8 -->
+
+        <div class="size-card">
+
+            <div class="size">
+                12 × 8
+                <span>INCH</span>
+            </div>
+
+            <div class="prices">
+
+                <a
+                    class="price"
+                    href="order.html?size=12x8&thickness=1inch&price=350">
+
+                    <div>
+                        <small>1 INCH</small>
+                        <strong>₹350</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+                <a
+                    class="price"
+                    href="order.html?size=12x8&thickness=2inch&price=450">
+
+                    <div>
+                        <small>2 INCH</small>
+                        <strong>₹450</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 10 X 15 -->
+
+        <div class="size-card">
+
+            <div class="size">
+                10 × 15
+                <span>INCH</span>
+            </div>
+
+            <div class="prices">
+
+                <a
+                    class="price"
+                    href="order.html?size=10x15&thickness=1inch&price=650">
+
+                    <div>
+                        <small>1 INCH</small>
+                        <strong>₹650</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+                <a
+                    class="price"
+                    href="order.html?size=10x15&thickness=2inch&price=750">
+
+                    <div>
+                        <small>2 INCH</small>
+                        <strong>₹750</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 12 X 15 -->
+
+        <div class="size-card">
+
+            <div class="size">
+                12 × 15
+                <span>INCH</span>
+            </div>
+
+            <div class="prices">
+
+                <a
+                    class="price"
+                    href="order.html?size=12x15&thickness=1inch&price=750">
+
+                    <div>
+                        <small>1 INCH</small>
+                        <strong>₹750</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+                <a
+                    class="price"
+                    href="order.html?size=12x15&thickness=2inch&price=850">
+
+                    <div>
+                        <small>2 INCH</small>
+                        <strong>₹850</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 12 X 18 -->
+
+        <div class="size-card">
+
+            <div class="size">
+                12 × 18
+                <span>INCH</span>
+            </div>
+
+            <div class="prices">
+
+                <a
+                    class="price"
+                    href="order.html?size=12x18&thickness=1inch&price=950">
+
+                    <div>
+                        <small>1 INCH</small>
+                        <strong>₹950</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+                <a
+                    class="price"
+                    href="order.html?size=12x18&thickness=2inch&price=1050">
+
+                    <div>
+                        <small>2 INCH</small>
+                        <strong>₹1,050</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 16 X 20 -->
+
+        <div class="size-card">
+
+            <div class="size">
+                16 × 20
+                <span>INCH</span>
+            </div>
+
+            <div class="prices">
+
+                <a
+                    class="price"
+                    href="order.html?size=16x20&thickness=1inch&price=1300">
+
+                    <div>
+                        <small>1 INCH</small>
+                        <strong>₹1,300</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+                <a
+                    class="price"
+                    href="order.html?size=16x20&thickness=2inch&price=1500">
+
+                    <div>
+                        <small>2 INCH</small>
+                        <strong>₹1,500</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 18 X 24 -->
+
+        <div class="size-card">
+
+            <div class="size">
+                18 × 24
+                <span>INCH</span>
+            </div>
+
+            <div class="prices">
+
+                <a
+                    class="price"
+                    href="order.html?size=18x24&thickness=1inch&price=1800">
+
+                    <div>
+                        <small>1 INCH</small>
+                        <strong>₹1,800</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+                <a
+                    class="price"
+                    href="order.html?size=18x24&thickness=2inch&price=2000">
+
+                    <div>
+                        <small>2 INCH</small>
+                        <strong>₹2,000</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 20 X 30 -->
+
+        <div class="size-card">
+
+            <div class="size">
+                20 × 30
+                <span>INCH</span>
+            </div>
+
+            <div class="prices">
+
+                <a
+                    class="price"
+                    href="order.html?size=20x30&thickness=1inch&price=2500">
+
+                    <div>
+                        <small>1 INCH</small>
+                        <strong>₹2,500</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+                <a
+                    class="price"
+                    href="order.html?size=20x30&thickness=2inch&price=2700">
+
+                    <div>
+                        <small>2 INCH</small>
+                        <strong>₹2,700</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 24 X 34 -->
+
+        <div class="size-card">
+
+            <div class="size">
+                24 × 34
+                <span>INCH</span>
+            </div>
+
+            <div class="prices">
+
+                <a
+                    class="price"
+                    href="order.html?size=24x34&thickness=1inch&price=3000">
+
+                    <div>
+                        <small>1 INCH</small>
+                        <strong>₹3,000</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+                <a
+                    class="price"
+                    href="order.html?size=24x34&thickness=2inch&price=3500">
+
+                    <div>
+                        <small>2 INCH</small>
+                        <strong>₹3,500</strong>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <footer class="footer">
+
+        VETHA DESIGN · FLEX & FRAME
+
+    </footer>
+
+
+</div>
+
+</body>
+
+</html>

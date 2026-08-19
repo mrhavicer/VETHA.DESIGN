@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Only Design | VETHA DESIGN</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #050b10;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.page {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px 14px 40px;
+}
+
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.back {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #0d1d27;
+    color: #00d4ff;
+
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.brand {
+    color: #00d4ff;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.header h1 {
+    margin: 3px 0 0;
+    font-size: 23px;
+}
+
+
+/* INTRO */
+
+.intro {
+    margin-bottom: 25px;
+}
+
+.intro-label {
+    color: #00d4ff;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.intro h2 {
+    margin: 8px 0;
+    font-size: 27px;
+}
+
+.intro h2 span {
+    color: #00d4ff;
+}
+
+.intro p {
+    margin: 0;
+    color: #7d929e;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* MODELS */
+
+.models {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.model {
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #0b1820;
+
+    border: 1px solid
+        rgba(0,212,255,0.15);
+}
+
+.model-image {
+    width: 100%;
+    height: 430px;
+
+    background: #071017;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.model-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+.model-name {
+    padding: 12px;
+
+    text-align: center;
+
+    color: #00d4ff;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* WHATSAPP SECTION */
+
+.order-section {
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+.order-text {
+    margin-bottom: 12px;
+
+    color: #7d929e;
+
+    font-size: 9px;
+}
+
+
+/* BIG WHATSAPP BUTTON */
+
+.whatsapp-button {
+    width: 100%;
+
+    min-height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border-radius: 12px;
+
+    background: #25D366;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(37,211,102,0.18);
+
+    transition: 0.2s;
+}
+
+.whatsapp-button:hover {
+    opacity: 0.92;
+}
+
+.whatsapp-button:active {
+    transform: scale(0.97);
+}
+
+.whatsapp-icon {
+    font-size: 22px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: #607783;
+
+    font-size: 7px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 450px) {
+
+    .page {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .models {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .model-image {
+        height: 500px;
+    }
+
+    .model-name {
+        font-size: 11px;
+    }
+
+    .whatsapp-button {
+        min-height: 64px;
+        font-size: 10px;
+    }
+
+}
+
+
+/* SMALL PHONE */
+
+@media (max-width: 350px) {
+
+    .model-image {
+        height: 430px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <a
+        href="products.html"
+        class="back">
+
+        ←
+
+    </a>
+
+    <div>
+
+        <div class="brand">
+            VETHA DESIGN
+        </div>
+
+        <h1>
+            ONLY DESIGN
+        </h1>
+
+    </div>
+
+</header>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <div class="intro-label">
+        ONLY DESIGN
+    </div>
+
+    <h2>
+        CHOOSE YOUR
+        <span>DESIGN</span>
+    </h2>
+
+    <p>
+        Explore our design models and
+        contact us directly for your order.
+    </p>
+
+</section>
+
+
+<!-- THREE MODELS -->
+
+<section class="models">
+
+
+    <!-- MODEL 1 -->
+
+    <div class="model">
+
+        <div class="model-image">
+
+            <img
+                src="../images/only-design-1.jpg"
+                alt="Only Design 1">
+
+        </div>
+
+        <div class="model-name">
+            ONLY DESIGN-1
+        </div>
+
+    </div>
+
+
+    <!-- MODEL 2 -->
+
+    <div class="model">
+
+        <div class="model-image">
+
+            <img
+                src="../images/only-design-2.jpg"
+                alt="Only Design 2">
+
+        </div>
+
+        <div class="model-name">
+            ONLY DESIGN-2
+        </div>
+
+    </div>
+
+
+    <!-- MODEL 3 -->
+
+    <div class="model">
+
+        <div class="model-image">
+
+            <img
+                src="../images/only-design-3.jpg"
+                alt="Only Design 3">
+
+        </div>
+
+        <div class="model-name">
+            ONLY DESIGN-3
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- ONE ORDER BUTTON -->
+
+<section class="order-section">
+
+    <div class="order-text">
+
+        Interested in an Only Design?
+        Contact VETHA DESIGN directly.
+
+    </div>
+
+
+    <a
+        class="whatsapp-button"
+
+        href="https://wa.me/918667887579?text=Hello%20VETHA%20DESIGN%2C%20I%20am%20interested%20in%20your%20Only%20Design%20models."
+
+        target="_blank">
+
+        <span class="whatsapp-icon">
+            ☎
+        </span>
+
+        ORDER ON WHATSAPP →
+
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    VETHA DESIGN · ONLY DESIGN
+
+</footer>
+
+
+</div>
+
+
+</body>
+
+</html>
