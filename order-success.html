@@ -24,59 +24,62 @@ body {
     color: white;
 
     font-family: Arial, sans-serif;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container {
-    width: 100%;
-    max-width: 520px;
-    padding: 18px;
-}
-
-.card {
-    padding: 28px 18px;
-
-    background: #0b1820;
-
-    border: 1px solid rgba(0,212,255,0.2);
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 15px 45px rgba(0,0,0,0.4);
 }
 
 
 /* =========================
-   TOP BUTTONS
+   TOP BAR
 ========================= */
 
-.top-buttons {
+.top-bar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 64px;
+
+    padding: 8px 12px;
+
     display: flex;
 
     gap: 10px;
 
-    margin-bottom: 24px;
+    align-items: center;
+
+    justify-content: center;
+
+    background: #050b10;
+
+    border-bottom: 1px solid
+        rgba(0,212,255,0.18);
+
+    z-index: 9999;
 }
 
-.top-buttons a {
+
+/* TOP BUTTONS */
+
+.top-button {
     flex: 1;
 
-    min-height: 48px;
+    max-width: 240px;
+
+    height: 46px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     border-radius: 10px;
 
     text-decoration: none;
 
-    font-size: 9px;
+    font-size: 10px;
 
     font-weight: bold;
 
@@ -85,14 +88,14 @@ body {
     transition: 0.2s;
 }
 
-.top-buttons a:active {
-    transform: scale(0.97);
+.top-button:active {
+    transform: scale(0.96);
 }
 
 
 /* WHATSAPP */
 
-.top-buttons .whatsapp {
+.whatsapp {
     background: #25D366;
 
     color: white;
@@ -101,14 +104,53 @@ body {
 
 /* CONTACT */
 
-.top-buttons .contact-button {
+.contact-button {
 
     background: #0d1d27;
 
     border: 1px solid
-        rgba(0,212,255,0.25);
+        rgba(0,212,255,0.3);
 
     color: #00d4ff;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    padding: 18px;
+
+    padding-top: 82px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+
+    padding: 28px 18px;
+
+    background: #0b1820;
+
+    border: 1px solid
+        rgba(0,212,255,0.2);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 45px
+        rgba(0,0,0,0.4);
 }
 
 
@@ -119,6 +161,7 @@ body {
 .success-icon {
 
     width: 70px;
+
     height: 70px;
 
     margin: 0 auto 18px;
@@ -126,6 +169,7 @@ body {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     border-radius: 50%;
@@ -320,6 +364,7 @@ h1 {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     margin-top: 10px;
@@ -374,569 +419,17 @@ h1 {
 
 @media (max-width: 380px) {
 
-    .top-buttons {
+    .top-bar {
+
+        padding-left: 8px;
+
+        padding-right: 8px;
 
         gap: 7px;
     }
 
-    .top-buttons a {
+    .top-button {
 
         font-size: 8px;
 
-        letter-spacing: 0.5px;
-    }
-
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<div class="container">
-
-<div class="card">
-
-
-    <!-- =========================
-         TOP BUTTONS
-    ========================== -->
-
-    <div class="top-buttons">
-
-
-        <a
-            id="whatsappButton"
-            href="#"
-            target="_blank"
-            class="whatsapp">
-
-            WhatsApp
-
-        </a>
-
-
-        <a
-            href="tel:+918667887579"
-            class="contact-button">
-
-            📞 Contact
-
-        </a>
-
-
-    </div>
-
-
-    <!-- =========================
-         SUCCESS
-    ========================== -->
-
-    <div class="success-icon">
-
-        ✓
-
-    </div>
-
-
-    <div class="brand">
-
-        VETHA DESIGN
-
-    </div>
-
-
-    <h1>
-
-        Order Successful!
-
-    </h1>
-
-
-    <p class="subtitle">
-
-        Thank you for choosing VETHA DESIGN.
-
-    </p>
-
-
-    <!-- =========================
-         ORDER NUMBER
-    ========================== -->
-
-    <div class="order-number">
-
-
-        <span class="order-label">
-
-            ORDER NUMBER
-
-        </span>
-
-
-        <span id="orderNumber">
-
-            —
-
-        </span>
-
-
-    </div>
-
-
-    <!-- =========================
-         ORDER DETAILS
-    ========================== -->
-
-    <div class="details">
-
-
-        <div class="detail">
-
-            <span class="detail-label">
-
-                Product
-
-            </span>
-
-            <span
-                class="detail-value"
-                id="product">
-
-                —
-
-            </span>
-
-        </div>
-
-
-        <div class="detail">
-
-            <span class="detail-label">
-
-                Size
-
-            </span>
-
-            <span
-                class="detail-value"
-                id="size">
-
-                —
-
-            </span>
-
-        </div>
-
-
-        <div class="detail">
-
-            <span class="detail-label">
-
-                Thickness
-
-            </span>
-
-            <span
-                class="detail-value"
-                id="thickness">
-
-                —
-
-            </span>
-
-        </div>
-
-
-        <div class="detail">
-
-            <span class="detail-label">
-
-                Quantity
-
-            </span>
-
-            <span
-                class="detail-value"
-                id="quantity">
-
-                —
-
-            </span>
-
-        </div>
-
-
-        <div class="detail">
-
-            <span class="detail-label">
-
-                Total Price
-
-            </span>
-
-            <span
-                class="detail-value"
-                id="price">
-
-                —
-
-            </span>
-
-        </div>
-
-
-        <div class="detail">
-
-            <span class="detail-label">
-
-                Payment
-
-            </span>
-
-            <span
-                class="detail-value"
-                id="payment">
-
-                —
-
-            </span>
-
-        </div>
-
-
-        <div class="detail">
-
-            <span class="detail-label">
-
-                UTR / Transaction ID
-
-            </span>
-
-            <span
-                class="detail-value"
-                id="utr">
-
-                —
-
-            </span>
-
-        </div>
-
-
-    </div>
-
-
-    <!-- =========================
-         CUSTOMER DETAILS
-    ========================== -->
-
-    <div class="customer-title">
-
-        CUSTOMER DETAILS
-
-    </div>
-
-
-    <div class="details">
-
-
-        <div class="detail">
-
-            <span class="detail-label">
-
-                Name
-
-            </span>
-
-            <span
-                class="detail-value"
-                id="customerName">
-
-                —
-
-            </span>
-
-        </div>
-
-
-        <div class="detail">
-
-            <span class="detail-label">
-
-                Phone
-
-            </span>
-
-            <span
-                class="detail-value"
-                id="phone">
-
-                —
-
-            </span>
-
-        </div>
-
-
-        <div class="address">
-
-
-            <strong>
-
-                Delivery Address
-
-            </strong>
-
-
-            <br><br>
-
-
-            <span id="address">
-
-                —
-
-            </span>
-
-
-        </div>
-
-
-    </div>
-
-
-    <!-- =========================
-         HOME
-    ========================== -->
-
-    <a
-        href="../index.html"
-        class="home">
-
-        BACK TO HOME
-
-    </a>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <div class="footer">
-
-        VETHA DESIGN · FLEX & FRAME
-
-    </div>
-
-
-</div>
-
-</div>
-
-
-<script>
-
-
-/* =========================
-   GET ORDER DATA
-========================= */
-
-const params =
-    new URLSearchParams(
-        window.location.search
-    );
-
-
-/* =========================
-   ORDER NUMBER
-========================= */
-
-let orderNumber =
-    params.get("order");
-
-
-if (!orderNumber) {
-
-    orderNumber =
-        "VD-" +
-        Math.floor(
-            100000 +
-            Math.random() * 900000
-        );
-
-}
-
-
-document.getElementById(
-    "orderNumber"
-).textContent =
-    orderNumber;
-
-
-/* =========================
-   PRODUCT DETAILS
-========================= */
-
-document.getElementById(
-    "product"
-).textContent =
-    params.get("product") || "—";
-
-
-document.getElementById(
-    "size"
-).textContent =
-    params.get("size") || "—";
-
-
-document.getElementById(
-    "thickness"
-).textContent =
-    params.get("thickness") || "—";
-
-
-document.getElementById(
-    "quantity"
-).textContent =
-    params.get("quantity") || "—";
-
-
-/* =========================
-   PRICE
-========================= */
-
-const price =
-    params.get("price");
-
-
-document.getElementById(
-    "price"
-).textContent =
-    price
-    ? "₹" +
-      Number(price)
-        .toLocaleString("en-IN")
-    : "—";
-
-
-/* =========================
-   PAYMENT
-========================= */
-
-document.getElementById(
-    "payment"
-).textContent =
-    params.get("payment") || "—";
-
-
-/* =========================
-   UTR
-========================= */
-
-document.getElementById(
-    "utr"
-).textContent =
-    params.get("utr") || "—";
-
-
-/* =========================
-   CUSTOMER DETAILS
-========================= */
-
-document.getElementById(
-    "customerName"
-).textContent =
-    params.get("name") || "—";
-
-
-document.getElementById(
-    "phone"
-).textContent =
-    params.get("phone") || "—";
-
-
-document.getElementById(
-    "address"
-).textContent =
-    params.get("address") || "—";
-
-
-/* =========================
-   WHATSAPP
-========================= */
-
-/*
-   VETHA DESIGN WHATSAPP NUMBER
-
-   Country code: 91
-   Number: 8667887579
-
-   No + symbol
-   No spaces
-*/
-
-const whatsappNumber =
-    "918667887579";
-
-
-/* =========================
-   WHATSAPP MESSAGE
-========================= */
-
-const whatsappMessage =
-
-`Hello VETHA DESIGN 👋
-
-I have placed an order.
-
-ORDER DETAILS
-
-Order No: ${orderNumber}
-
-Product: ${params.get("product") || "—"}
-Size: ${params.get("size") || "—"}
-Thickness: ${params.get("thickness") || "—"}
-Quantity: ${params.get("quantity") || "—"}
-Total Price: ₹${price || "—"}
-
-Payment: ${params.get("payment") || "—"}
-UTR / Transaction ID: ${params.get("utr") || "—"}
-
-CUSTOMER DETAILS
-
-Name: ${params.get("name") || "—"}
-Phone: ${params.get("phone") || "—"}
-
-Address:
-${params.get("address") || "—"}
-
-Please confirm my order.
-
-Thank you.
-VETHA DESIGN`;
-
-
-/* =========================
-   WHATSAPP LINK
-========================= */
-
-document.getElementById(
-    "whatsappButton"
-).href =
-    "https://wa.me/" +
-    whatsappNumber +
-    "?text=" +
-    encodeURIComponent(
-        whatsappMessage
-    );
-
-
-</script>
-
-
-</body>
-
-</html>
+        letter
