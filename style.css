@@ -58,7 +58,7 @@ a {
     font-weight: 900;
 
     line-height: 0.85;
-    letter-spacing: -4px;
+    letter-spacing: 6px;
 }
 
 .brand-logo span {
@@ -681,6 +681,7 @@ footer {
     color: #8da0aa;
 
     font-size: 8px;
+
     font-weight: bold;
 
     letter-spacing: 2px;
@@ -802,4 +803,3 @@ footer {
     }
 
 }
-
