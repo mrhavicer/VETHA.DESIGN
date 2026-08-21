@@ -50,15 +50,81 @@ body {
 }
 
 
-/* SUCCESS ICON */
+/* =========================
+   TOP BUTTONS
+========================= */
+
+.top-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 24px;
+}
+
+.top-buttons a {
+    flex: 1;
+
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.2s;
+}
+
+.top-buttons a:active {
+    transform: scale(0.97);
+}
+
+
+/* WHATSAPP */
+
+.top-buttons .whatsapp {
+    background: #25D366;
+
+    color: white;
+}
+
+
+/* CONTACT */
+
+.top-buttons .contact-button {
+
+    background: #0d1d27;
+
+    border: 1px solid
+        rgba(0,212,255,0.25);
+
+    color: #00d4ff;
+}
+
+
+/* =========================
+   SUCCESS ICON
+========================= */
 
 .success-icon {
+
     width: 70px;
     height: 70px;
 
     margin: 0 auto 18px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -72,9 +138,12 @@ body {
 }
 
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 .brand {
+
     text-align: center;
 
     color: #00d4ff;
@@ -85,6 +154,7 @@ body {
 }
 
 h1 {
+
     margin: 8px 0 6px;
 
     text-align: center;
@@ -93,6 +163,7 @@ h1 {
 }
 
 .subtitle {
+
     margin: 0 0 22px;
 
     text-align: center;
@@ -103,9 +174,12 @@ h1 {
 }
 
 
-/* ORDER NUMBER */
+/* =========================
+   ORDER NUMBER
+========================= */
 
 .order-number {
+
     padding: 16px;
 
     margin-bottom: 16px;
@@ -121,6 +195,7 @@ h1 {
 }
 
 .order-label {
+
     display: block;
 
     margin-bottom: 7px;
@@ -133,6 +208,7 @@ h1 {
 }
 
 #orderNumber {
+
     color: #00d4ff;
 
     font-size: 21px;
@@ -143,9 +219,12 @@ h1 {
 }
 
 
-/* DETAILS */
+/* =========================
+   DETAILS
+========================= */
 
 .details {
+
     padding: 14px;
 
     margin-bottom: 18px;
@@ -156,6 +235,7 @@ h1 {
 }
 
 .detail {
+
     display: flex;
 
     justify-content: space-between;
@@ -171,14 +251,17 @@ h1 {
 }
 
 .detail:last-child {
+
     border-bottom: none;
 }
 
 .detail-label {
+
     color: #718592;
 }
 
 .detail-value {
+
     max-width: 65%;
 
     color: white;
@@ -191,9 +274,12 @@ h1 {
 }
 
 
-/* CUSTOMER */
+/* =========================
+   CUSTOMER
+========================= */
 
 .customer-title {
+
     margin-bottom: 10px;
 
     color: #00d4ff;
@@ -204,6 +290,7 @@ h1 {
 }
 
 .address {
+
     margin-top: 10px;
 
     padding: 12px;
@@ -220,86 +307,12 @@ h1 {
 }
 
 
-/* WHATSAPP BUTTON */
-
-.whatsapp {
-    width: 100%;
-
-    min-height: 54px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin-top: 18px;
-
-    border-radius: 10px;
-
-    background: #25D366;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 9px;
-
-    font-weight: bold;
-
-    letter-spacing: 1px;
-
-    transition: 0.2s;
-}
-
-.whatsapp:active {
-    transform: scale(0.97);
-}
-
-
-/* CONTACT BUTTON */
-
-.contact-button {
-    width: 100%;
-
-    min-height: 54px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin-top: 10px;
-
-    border-radius: 10px;
-
-    background: #0d1d27;
-
-    border: 1px solid
-        rgba(0,212,255,0.25);
-
-    color: #00d4ff;
-
-    text-decoration: none;
-
-    font-size: 10px;
-
-    font-weight: bold;
-
-    letter-spacing: 2px;
-
-    transition: 0.2s;
-}
-
-.contact-button:active {
-    transform: scale(0.97);
-}
-
-
-/* HOME BUTTON */
+/* =========================
+   HOME BUTTON
+========================= */
 
 .home {
+
     width: 100%;
 
     min-height: 50px;
@@ -307,7 +320,6 @@ h1 {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     margin-top: 10px;
@@ -333,13 +345,17 @@ h1 {
 }
 
 .home:active {
+
     transform: scale(0.97);
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
+
     margin-top: 20px;
 
     text-align: center;
@@ -349,6 +365,27 @@ h1 {
     font-size: 7px;
 
     letter-spacing: 1px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    .top-buttons {
+
+        gap: 7px;
+    }
+
+    .top-buttons a {
+
+        font-size: 8px;
+
+        letter-spacing: 0.5px;
+    }
+
 }
 
 </style>
@@ -364,44 +401,95 @@ h1 {
 <div class="card">
 
 
-    <!-- SUCCESS -->
+    <!-- =========================
+         TOP BUTTONS
+    ========================== -->
+
+    <div class="top-buttons">
+
+
+        <a
+            id="whatsappButton"
+            href="#"
+            target="_blank"
+            class="whatsapp">
+
+            WhatsApp
+
+        </a>
+
+
+        <a
+            href="tel:+918667887579"
+            class="contact-button">
+
+            📞 Contact
+
+        </a>
+
+
+    </div>
+
+
+    <!-- =========================
+         SUCCESS
+    ========================== -->
 
     <div class="success-icon">
+
         ✓
+
     </div>
 
 
     <div class="brand">
+
         VETHA DESIGN
+
     </div>
 
 
     <h1>
+
         Order Successful!
+
     </h1>
 
 
     <p class="subtitle">
+
         Thank you for choosing VETHA DESIGN.
+
     </p>
 
 
-    <!-- ORDER NUMBER -->
+    <!-- =========================
+         ORDER NUMBER
+    ========================== -->
 
     <div class="order-number">
 
+
         <span class="order-label">
+
             ORDER NUMBER
+
         </span>
 
+
         <span id="orderNumber">
+
             —
+
         </span>
+
 
     </div>
 
 
-    <!-- ORDER DETAILS -->
+    <!-- =========================
+         ORDER DETAILS
+    ========================== -->
 
     <div class="details">
 
@@ -409,13 +497,17 @@ h1 {
         <div class="detail">
 
             <span class="detail-label">
+
                 Product
+
             </span>
 
             <span
                 class="detail-value"
                 id="product">
+
                 —
+
             </span>
 
         </div>
@@ -424,13 +516,17 @@ h1 {
         <div class="detail">
 
             <span class="detail-label">
+
                 Size
+
             </span>
 
             <span
                 class="detail-value"
                 id="size">
+
                 —
+
             </span>
 
         </div>
@@ -439,13 +535,17 @@ h1 {
         <div class="detail">
 
             <span class="detail-label">
+
                 Thickness
+
             </span>
 
             <span
                 class="detail-value"
                 id="thickness">
+
                 —
+
             </span>
 
         </div>
@@ -454,13 +554,17 @@ h1 {
         <div class="detail">
 
             <span class="detail-label">
+
                 Quantity
+
             </span>
 
             <span
                 class="detail-value"
                 id="quantity">
+
                 —
+
             </span>
 
         </div>
@@ -469,13 +573,17 @@ h1 {
         <div class="detail">
 
             <span class="detail-label">
+
                 Total Price
+
             </span>
 
             <span
                 class="detail-value"
                 id="price">
+
                 —
+
             </span>
 
         </div>
@@ -484,13 +592,17 @@ h1 {
         <div class="detail">
 
             <span class="detail-label">
+
                 Payment
+
             </span>
 
             <span
                 class="detail-value"
                 id="payment">
+
                 —
+
             </span>
 
         </div>
@@ -499,13 +611,17 @@ h1 {
         <div class="detail">
 
             <span class="detail-label">
+
                 UTR / Transaction ID
+
             </span>
 
             <span
                 class="detail-value"
                 id="utr">
+
                 —
+
             </span>
 
         </div>
@@ -514,10 +630,14 @@ h1 {
     </div>
 
 
-    <!-- CUSTOMER DETAILS -->
+    <!-- =========================
+         CUSTOMER DETAILS
+    ========================== -->
 
     <div class="customer-title">
+
         CUSTOMER DETAILS
+
     </div>
 
 
@@ -527,13 +647,17 @@ h1 {
         <div class="detail">
 
             <span class="detail-label">
+
                 Name
+
             </span>
 
             <span
                 class="detail-value"
                 id="customerName">
+
                 —
+
             </span>
 
         </div>
@@ -542,13 +666,17 @@ h1 {
         <div class="detail">
 
             <span class="detail-label">
+
                 Phone
+
             </span>
 
             <span
                 class="detail-value"
                 id="phone">
+
                 —
+
             </span>
 
         </div>
@@ -556,15 +684,23 @@ h1 {
 
         <div class="address">
 
+
             <strong>
+
                 Delivery Address
+
             </strong>
+
 
             <br><br>
 
+
             <span id="address">
+
                 —
+
             </span>
+
 
         </div>
 
@@ -572,31 +708,9 @@ h1 {
     </div>
 
 
-    <!-- WHATSAPP -->
-
-    <a
-        id="whatsappButton"
-        href="#"
-        target="_blank"
-        class="whatsapp">
-
-        SEND ORDER DETAILS ON WHATSAPP →
-
-    </a>
-
-
-    <!-- CONTACT US -->
-
-    <a
-        href="tel:+918667887579"
-        class="contact-button">
-
-        📞 CONTACT US
-
-    </a>
-
-
-    <!-- HOME -->
+    <!-- =========================
+         HOME
+    ========================== -->
 
     <a
         href="../index.html"
@@ -606,6 +720,10 @@ h1 {
 
     </a>
 
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <div class="footer">
 
@@ -686,6 +804,10 @@ document.getElementById(
     params.get("quantity") || "—";
 
 
+/* =========================
+   PRICE
+========================= */
+
 const price =
     params.get("price");
 
@@ -700,11 +822,19 @@ document.getElementById(
     : "—";
 
 
+/* =========================
+   PAYMENT
+========================= */
+
 document.getElementById(
     "payment"
 ).textContent =
     params.get("payment") || "—";
 
+
+/* =========================
+   UTR
+========================= */
 
 document.getElementById(
     "utr"
@@ -739,9 +869,10 @@ document.getElementById(
 ========================= */
 
 /*
-   CHANGE THIS NUMBER
-   Example:
-   919876543210
+   VETHA DESIGN WHATSAPP NUMBER
+
+   Country code: 91
+   Number: 8667887579
 
    No + symbol
    No spaces
@@ -750,6 +881,10 @@ document.getElementById(
 const whatsappNumber =
     "918667887579";
 
+
+/* =========================
+   WHATSAPP MESSAGE
+========================= */
 
 const whatsappMessage =
 
@@ -783,6 +918,10 @@ Please confirm my order.
 Thank you.
 VETHA DESIGN`;
 
+
+/* =========================
+   WHATSAPP LINK
+========================= */
 
 document.getElementById(
     "whatsappButton"
