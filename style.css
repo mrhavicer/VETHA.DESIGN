@@ -48,7 +48,7 @@ a {
     justify-content: center;
     align-items: center;
 
-    padding: 10px 4 35px;
+    padding: 10px 2 35px;
 }
 
 .brand-logo {
@@ -58,7 +58,7 @@ a {
     font-weight: 900;
 
     line-height: 0.85;
-    letter-spacing: 12px;
+    letter-spacing: 10px;
 }
 
 .brand-logo span {
